@@ -6,7 +6,10 @@ import markdown.extensions.fenced_code
 import markdown.extensions.codehilite
 
 openai.api_key = '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'
+from flask_ngrok import run_with_ngrok
+from flask import Flask
 app = Flask(__name__)
+run_with_ngrok(app)   # 将flask app对象传递给run_with_ngrok函数
 messages = []
 @app.route('/')
 def home():
