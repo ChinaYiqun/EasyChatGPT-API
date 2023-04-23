@@ -5,7 +5,7 @@ import markdown
 import markdown.extensions.fenced_code
 import markdown.extensions.codehilite
 
-openai.api_key = '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'
+openai.api_key = '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'
 from flask_ngrok import run_with_ngrok
 from flask import Flask
 app = Flask(__name__)
