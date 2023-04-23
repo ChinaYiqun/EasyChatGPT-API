@@ -5,7 +5,7 @@ import markdown
 import markdown.extensions.fenced_code
 import markdown.extensions.codehilite
 
-openai.api_key = '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'
+openai.api_key = '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'
 from flask_ngrok import run_with_ngrok
 from flask import Flask
 app = Flask(__name__)
@@ -14,7 +14,7 @@ messages = []
 @app.route('/')
 def home():
 
-    return render_template('index4.html')
+    return render_template('index.html')
 
 @app.route('/get_response', methods=['POST'])
 
@@ -37,4 +37,4 @@ def reset():
     messages = []
     return "Conversation history has been reset."
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
